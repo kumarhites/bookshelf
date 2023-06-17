@@ -3,9 +3,8 @@ import { useData } from "../contexts/DataContext";
 import Card from "../components/Card";
 
 const Home = () => {
-  const { currentlyReading, wantToRead, alreadyRead, books, loading } =
+  const { currentlyReading, wantToRead, alreadyRead, loading } =
     useData();
-  console.log(currentlyReading);
   return (
     <>
       {loading ? (
@@ -16,7 +15,7 @@ const Home = () => {
             <h1 className="text-2xl md:text-3xl font-semibold p-3 mt-5 ">
               Currently Reading
             </h1>
-            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-5 w-auto">
+            <div className="grid sm:grid-cols-2 md:grid-cols-4 md:gap-2 gap-5 w-auto">
               {currentlyReading &&
                 currentlyReading.map((book) => (
                   <Card book={book} key={book.id} />
