@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useData } from "../contexts/DataContext";
 import Card from "../components/Card";
+import { FiArrowLeft } from "react-icons/fi";
+import { NavLink } from "react-router-dom";
 
 const Search = () => {
   const [searchInput, setSearchInput] = useState("");
@@ -15,6 +17,9 @@ const Search = () => {
     <div className="w-full md:w-[1280px] md:mx-auto">
       <div className="border-b-2 p-2 pb-5">
         <div className="max-w-full mx-auto p-10">
+          <NavLink to="/" className="flex items-center text-lg py-3 font-bold gap-3">
+            <FiArrowLeft size={20}/> Back Home
+          </NavLink>
           <div className="relative flex items-center w-full h-12 rounded-lg focus-within:shadow-lg bg-white overflow-hidden border P-5">
             <div className="grid place-items-center h-full w-12 text-gray-300">
               <svg

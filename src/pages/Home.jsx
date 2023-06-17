@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import { useData } from "../contexts/DataContext";
 import Card from "../components/Card";
 
